@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+
+
+
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ServletRegistraion</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRegistraion</servlet-name>
+        <url-pattern>/Registration</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>WelcomePage</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomePage</servlet-name>
+        <url-pattern>/Welcome</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ModeratorServlet</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.ModeratorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModeratorServlet</servlet-name>
+        <url-pattern>/ModeratorPage</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/Update</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddUserPageAdmin</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.AddUserPageAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUserPageAdmin</servlet-name>
+        <url-pattern>/AddUserPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>ua.org.oa.expertiza.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+
+    <resource-ref>
+        <description>MySQL Datasource example</description>
+        <res-ref-name>jdbc/myconn</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+
+</web-app>
